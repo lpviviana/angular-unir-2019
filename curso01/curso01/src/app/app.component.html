@@ -504,7 +504,7 @@
       </svg>
     </a>
   </div>
-<app-user-profile name="Alicia" role="Admin" (logout)="onLogout($event)"></app-user-profile>
+<app-user-profile [name]="user" role="{{role}}" (logout)="onLogout($event)"></app-user-profile>
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;

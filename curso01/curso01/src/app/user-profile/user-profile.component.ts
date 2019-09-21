@@ -4,6 +4,7 @@ export interface TimeInfo {
   name: string;
   role?: string;
 }
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -14,7 +15,18 @@ export class UserProfileComponent implements OnInit {
   @Input() name: string;
   @Input() role: string;
   @Output() logout = new EventEmitter<TimeInfo>();
+  @Output() countrySelected=new EventEmitter<string>();
 
+  paises:string[]=[
+    "Bolivia","Mexico",'España','Colombia'
+  ]
+  paisSeleccionado:string=null;
+
+  selectCountry(pais:string):void{
+    this.paisSeleccionado=pais;
+   this.countrySelected.emit(pais);
+    console.log('Selecciono:',pais);
+  }
   constructor() { }
 
   ngOnInit() {
