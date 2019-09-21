@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimeInfo } from './user-profile/user-profile.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curso01';
+  onLogout(evenInfo:TimeInfo):void{
+    console.log('El usuario '+evenInfo.name + 'hizo logout a horas '+ evenInfo.timestamp);
+  }
 }
