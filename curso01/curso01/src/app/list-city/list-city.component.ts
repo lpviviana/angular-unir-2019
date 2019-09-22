@@ -10,6 +10,7 @@ import { CityService } from '../services/city.service';
 export class ListCityComponent implements OnInit {
 
   cities:City[];
+  searchFilter='';
   constructor( private cityService: CityService) { }
 
   ngOnInit() {

@@ -12,6 +12,10 @@ import { ListCityComponent } from './list-city/list-city.component';
 import { CityService } from './services/city.service';
 import { CityComponent } from './city/city.component';
 import { WeatherService } from './services/weather.service';
+import { CurrencyPipe } from './pipe/currency.pipe';
+import { StartWithPipe } from './pipe/start-with.pipe';
+import { ResaltaDirective } from './directives/resalta.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { WeatherService } from './services/weather.service';
     UserProfileComponent,
     CounterComponent,
     CityComponent,
-    ListCityComponent
+    ListCityComponent,
+    CurrencyPipe,
+    StartWithPipe,
+    ResaltaDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

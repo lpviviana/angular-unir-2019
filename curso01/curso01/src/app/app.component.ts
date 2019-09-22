@@ -23,6 +23,11 @@ export class AppComponent implements OnInit {
   valor2=1;
   suma=0;
 
+
+  m1=2.7;
+  m2=1.16;
+  m3=42.0;
+
   constructor(private logger:LoggerService){
 
   }
