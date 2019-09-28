@@ -1,0 +1,11 @@
+<div>
+    <ol>
+        <li *ngFor="let p of places">
+            <app-place [place]=p></app-place>
+        </li>
+    </ol>
+    <div class="error" *ngIf="error">
+        {{error}}
+    </div>
+
+</div>

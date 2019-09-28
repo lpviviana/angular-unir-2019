@@ -16,6 +16,9 @@ import { CurrencyPipe } from './pipe/currency.pipe';
 import { StartWithPipe } from './pipe/start-with.pipe';
 import { ResaltaDirective } from './directives/resalta.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { PlaceComponent } from './places/place/place.component';
+import { PlaceListComponent } from './places/place-list/place-list.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { UnlessDirective } from './directives/unless.directive';
     CurrencyPipe,
     StartWithPipe,
     ResaltaDirective,
-    UnlessDirective
+    UnlessDirective,
+    PlaceComponent,
+    PlaceListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ 
      //LoggerService
